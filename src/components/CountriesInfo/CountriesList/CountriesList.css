@@ -2,7 +2,7 @@
     height: 90vh;
     overflow: scroll;
     width: 34%;
-    border: 3px solid #83ba6a;
+    border: 3px solid #7056ac;
     border-radius: 10px;
     padding: 15px 10px 10px;
     margin-right: 10px;
@@ -18,8 +18,9 @@
     cursor: pointer;
     padding: 5px 10px;
     margin: 5px 0;
-    background: #b4ff92;
+    background: #7056ac;
+    color: #fff;
 }
 .CountriesList li:hover{
-    background: #83ba6a;
+    background: #493870;
 }

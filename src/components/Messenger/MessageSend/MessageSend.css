@@ -3,7 +3,7 @@
     justify-content: center;
 }
 .SendWrapper{
-    border: 1px solid #000;
+    border: 2px solid #7056ac;
     padding: 10px 0 0;
 }
 .SendWrapper:last-child{
@@ -11,10 +11,11 @@
 }
 .SendWrapper span{
     display: block;
+    padding: 0 6px;
     text-transform: uppercase;
 }
 .SendWrapper input{
-    border-top: 1px solid #000;
+    border-top: 1px solid #7056ac;
     font-size: 18px;
     padding: 2px 5px;
 }

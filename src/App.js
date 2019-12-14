@@ -5,6 +5,7 @@ import Main from "./containers/Main/Main";
 import About from "./containers/About/About";
 import CountriesInfo from "./containers/Portfolio/CountriesInfo/CountriesInfo";
 import Messenger from "./containers/Portfolio/Messenger/Messenger";
+import MoviesContainer from "./containers/Portfolio/MoviesContainer/MoviesContainer";
 //todo: can't solve problem with z-index
 class App extends Component{
   state = {
@@ -31,12 +32,11 @@ class App extends Component{
               <li><NavLink onClick={this.workFlagFalse} className='NavLink' exact to='/'>Main</NavLink></li>
               <li><NavLink onClick={this.workFlagFalse} className='NavLink' to='/about'>About Me</NavLink></li>
               <li className='BurgerWrapper'>
-                <span className={burgerClass} onClick={this.workFlagHandler}>Wanna see my works?</span>
+                <span className={burgerClass} onClick={this.workFlagHandler}>Wanna checkout my works?</span>
                 <ul className='Burger' style={{transform: this.state.workFlag ? 'translateY(0)':'translateY(-150%)', transitionDuration: '1s'}}>
                   <li><NavLink onClick={this.workFlagFalse} className='NavLink' to='/countries-info'>Countries</NavLink></li>
                   <li><NavLink onClick={this.workFlagFalse} className='NavLink' to='/messenger'>Messenger</NavLink></li>
-                  <li><NavLink onClick={this.workFlagFalse} className='NavLink' to='/kkjkj'>third</NavLink></li>
-                  <li><NavLink onClick={this.workFlagFalse} className='NavLink' to='/kkjkj'>fourth</NavLink></li>
+                  <li><NavLink onClick={this.workFlagFalse} className='NavLink' to='/watchlist'>Watchlist</NavLink></li>
                 </ul>
               </li>
             </ul>
@@ -46,6 +46,7 @@ class App extends Component{
             <Route path='/about' component={About}/>
             <Route path='/countries-info' component={CountriesInfo}/>
             <Route path='/messenger' component={Messenger}/>
+            <Route path='/watchlist' component={MoviesContainer}/>
             <Route render={() => <h1>Page Not Found</h1>}/>
           </Switch>
         </BrowserRouter>

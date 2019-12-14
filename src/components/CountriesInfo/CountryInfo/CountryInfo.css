@@ -3,14 +3,14 @@
     margin: 100px auto 0;
 }
 .CountryInfo{
-    border: 3px solid #83ba6a;
+    border: 3px solid #7056ac;
     border-radius: 10px;
     text-align: left;
     padding: 15px 10px 0 15px;
     width: 65%;
 }
 .Top-Info, .Middle-Info, .Bottom-Info{
-    border: 1px solid #83ba6a;
+    border: 1px solid #7056ac;
     border-radius: 10px;
     display: flex;
     justify-content: space-around;
