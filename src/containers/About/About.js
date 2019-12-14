@@ -4,7 +4,7 @@ const About = () => {
     return (
         <Fragment>
             <main>
-                about us
+                about me
             </main>
         </Fragment>
     );
