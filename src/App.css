@@ -1,9 +1,17 @@
-.Main-header ul li{
+.Main-header{
+  padding: 0 5px 5px;
+}
+.Main-header ul{
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+}
+.Main-header li{
   display: inline-block;
   list-style: none;
   margin: 0 5px 0 5px;
+  padding: 1px;
 }
-
 .NavLink {
   border-radius: 5px;
   text-decoration: none;
@@ -11,6 +19,30 @@
   padding: 3px 10px;
   background: #7056ac;
   color: #fff;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.BurgerWrapper{
+  position: relative;
+}
+.Burger{
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+.NavLink + .Burger > li{
+  margin: 3px 0;
+  width: 50%;
+}
+.Burger .NavLink{
+  display: inline-block;
+  width: 100%;
+  pointer-events: visible;
 }
 .NavLink.active{
   background: #493870;
