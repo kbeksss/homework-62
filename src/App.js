@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, NavLink, Route, Switch} from "react-router-dom";
+import SecondContainer from "./containers/SecondContainer/SecondContainer";
+import Main from "./containers/Main/Main";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter>
+        <header className='Main-header'>
+          <ul>
+            <li><NavLink className='NavLink' exact to='/'>Main</NavLink></li>
+            <li><NavLink className='NavLink' to='/about-us'>Go to the second page</NavLink></li>
+          </ul>
+        </header>
+        <Switch>
+          <Route path='/' exact component={Main}/>
+          <Route path='/about-us' component={SecondContainer}/>
+          <Route render={() => <h1>Page Not Found</h1>}/>
+        </Switch>
+      </BrowserRouter>
   );
-}
+};
 
 export default App;
