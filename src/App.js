@@ -4,6 +4,7 @@ import {BrowserRouter, NavLink, Route, Switch} from "react-router-dom";
 import Main from "./containers/Main/Main";
 import About from "./containers/About/About";
 import CountriesInfo from "./containers/Portfolio/CountriesInfo/CountriesInfo";
+import Messenger from "./containers/Portfolio/Messenger/Messenger";
 //todo: can't solve problem with z-index
 class App extends Component{
   state = {
@@ -32,8 +33,8 @@ class App extends Component{
               <li className='BurgerWrapper'>
                 <span className={burgerClass} onClick={this.workFlagHandler}>Wanna see my works?</span>
                 <ul className='Burger' style={{transform: this.state.workFlag ? 'translateY(0)':'translateY(-150%)', transitionDuration: '1s'}}>
-                  <li><NavLink onClick={this.workFlagFalse} className='NavLink' to='/countries-info'>Some info about countries</NavLink></li>
-                  <li><NavLink onClick={this.workFlagFalse} className='NavLink' to='/kkjkj'>second</NavLink></li>
+                  <li><NavLink onClick={this.workFlagFalse} className='NavLink' to='/countries-info'>Countries</NavLink></li>
+                  <li><NavLink onClick={this.workFlagFalse} className='NavLink' to='/messenger'>Messenger</NavLink></li>
                   <li><NavLink onClick={this.workFlagFalse} className='NavLink' to='/kkjkj'>third</NavLink></li>
                   <li><NavLink onClick={this.workFlagFalse} className='NavLink' to='/kkjkj'>fourth</NavLink></li>
                 </ul>
@@ -44,6 +45,7 @@ class App extends Component{
             <Route path='/' exact component={Main}/>
             <Route path='/about' component={About}/>
             <Route path='/countries-info' component={CountriesInfo}/>
+            <Route path='/messenger' component={Messenger}/>
             <Route render={() => <h1>Page Not Found</h1>}/>
           </Switch>
         </BrowserRouter>
