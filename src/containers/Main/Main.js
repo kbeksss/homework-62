@@ -7,7 +7,8 @@ const Main = () => {
                 <div className='MeWrapper'>
                     <div>Hello,</div>
                     <div className='Name'>I'm <span>Beks</span>,</div>
-                    <div className='Job'>a <span>Web Developer</span></div>
+                    <div className='Job'>a beginner <span>Web Developer.</span></div>
+                    <div>Welcome to my page!</div>
                 </div>
             </div>
         </Fragment>
