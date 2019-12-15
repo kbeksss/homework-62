@@ -3,7 +3,7 @@
     justify-content: center;
 }
 .SendWrapper{
-    border: 2px solid #7056ac;
+    border: 2px solid #034198;
     padding: 10px 0 0;
 }
 .SendWrapper:last-child{
@@ -15,10 +15,23 @@
     text-transform: uppercase;
 }
 .SendWrapper input{
-    border-top: 1px solid #7056ac;
+    border: none;
+    border-top: 1px solid #034198;
     font-size: 18px;
     padding: 2px 5px;
+    background: #17181b;
+    color: #fff;
 }
 .SendWrapper button{
     height: 100%;
+    background: #034198;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.SendWrapper button:hover{
+    background: #17181b;
+}
+.SendWrapper button:active{
+    background: #656976;
 }

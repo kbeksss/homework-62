@@ -58,16 +58,18 @@ class MoviesContainer extends Component {
     render() {
         return (
             <div className='MoviesContainer'>
-                <ToWatch
-                    onChange={(event) => this.changeWishList(event)}
-                    formSubmit={this.addCurrentWishList}
-                    valToWatch={this.state.wishList}
-                />
-                <WatchList
-                    movies={this.state.movies}
-                    changeTitle={this.changeTitle}
-                    removeFilm={this.removeFilm}
-                />
+                <div className="MoviesWrapper">
+                    <ToWatch
+                        onChange={(event) => this.changeWishList(event)}
+                        formSubmit={this.addCurrentWishList}
+                        valToWatch={this.state.wishList}
+                    />
+                    <WatchList
+                        movies={this.state.movies}
+                        changeTitle={this.changeTitle}
+                        removeFilm={this.removeFilm}
+                    />
+                </div>
             </div>
         );
     }

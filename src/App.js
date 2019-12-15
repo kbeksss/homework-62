@@ -8,15 +8,21 @@ import Messenger from "./containers/Portfolio/Messenger/Messenger";
 import MoviesContainer from "./containers/Portfolio/MoviesContainer/MoviesContainer";
 class App extends Component{
   state = {
-    workFlag: false
+      showImage: true,
+      workFlag: false
+  };
+  toggleImage = () => {
+      this.setState(prevState => {
+          return {showImage: !prevState.showImage}
+      })
   };
   workFlagFalse = () => {
-    this.setState({workFlag: false});
+      this.setState({workFlag: false});
   };
   workFlagHandler = () => {
-    this.setState(prevState => {
-      return {workFlag: !prevState.workFlag}
-    });
+      this.setState(prevState => {
+          return {workFlag: !prevState.workFlag}
+      });
   };
   render(){
     const burgerButton = ['NavLink', 'BurgerButton'];
@@ -29,8 +35,8 @@ class App extends Component{
           <main className='Main'>
             <aside className='Aside'>
               <div className='MyPhoto'>
-                <img src={require('./my-photo.jpg')} alt="me"/>
-                <p>Beks Kadyrbekov</p>
+                <img style={{display: this.state.showImage ? 'block': 'none'}} src={require('./my-photo.jpg')} alt="me"/>
+                <p onClick={this.toggleImage} style={{position: this.state.showImage ? 'absolute' : 'static', background: this.state.showImage ? 'rgba(6, 26, 73, 0.58)' : '#022352'}}>Beks Kadyrbekov</p>
               </div>
               <ul className='Main-nav'>
                 <li><NavLink onClick={this.workFlagFalse} className='NavLink' exact to='/'>Main</NavLink></li>

@@ -1,0 +1,40 @@
+.About{
+    background: url("./about-background.jpg") 50% 50% no-repeat;
+    background-size: cover;
+}
+.AboutWrapper{
+    background: rgba(0, 0, 0, 0.43);
+    margin: 20px auto auto;
+    width: 95%;
+    border-radius: 10px;
+    height: 95%;
+}
+.AboutWrapper h2{
+    font-size: 27px;
+    text-align: center;
+    margin: 0;
+    border-bottom: 2px solid #fff;
+    text-transform: uppercase;
+    padding: 30px 0 20px;
+}
+.AboutWrapper > h3{
+    font-size: 25px;
+    padding: 5px 20px;
+}
+.AboutItems{
+    display: flex;
+    flex-wrap: wrap;
+}
+.AboutElement{
+    padding: 5px 20px;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.57);
+    border-radius: 10px;
+    width: 25%;
+    margin: 15px;
+}
+.AboutElement h3{
+    text-transform: uppercase;
+    border-bottom: 2px dotted #fff;
+    padding: 20px 40px;
+}

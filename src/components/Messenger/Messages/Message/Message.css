@@ -5,7 +5,7 @@
     text-align: left;
 }
 .MessageWrapper{
-    border: 2px solid #7056ac;
+    border: 2px solid #034198;
     padding: 5px 20px;
     word-wrap: break-word;
     font-size: 14px;
@@ -20,6 +20,6 @@
     width: 20%;
 }
 .MessageWrapper div{
-    border-bottom: 1px solid #7056ac;
+    border-bottom: 1px solid #034198;
     margin: 0 -10px;
 }

@@ -5,7 +5,7 @@ import Messages from "../../../components/Messenger/Messages/Messages";
 
 class Messenger extends Component {
     state = {
-        currentMessage: {author: 'Beks', message: 'Hello, guys'},
+        currentMessage: {author: 'Someone', message: 'Something'},
         newMessages: [],
     };
     componentDidMount = async () => {
@@ -39,7 +39,9 @@ class Messenger extends Component {
         data.set('message', this.state.currentMessage.message);
         data.set('author', this.state.currentMessage.author);
         const sendingD = await fetch(url, {method: 'post', body: data});
-        this.setState({currentMessage: {author: '', message: ''}});
+        this.setState(prevState => {
+            return {currentMessage : {author: prevState.currentMessage.author, message: ''}}
+        });
         if(!sendingD.ok){
             throw new Error('Something went wrong while sending your data')
         }

@@ -2,7 +2,7 @@
     height: 90vh;
     overflow-y: scroll;
     width: 34%;
-    border: 3px solid #1d821e;
+    border: 3px solid #034198;
     border-radius: 10px;
     padding: 15px 10px 10px;
     margin-right: 10px;
@@ -18,9 +18,28 @@
     cursor: pointer;
     padding: 5px 10px;
     margin: 5px 0;
-    background: #219122;
+    background: #022352;
     color: #fff;
 }
 .CountriesList li:hover{
-    background: #125212;
+    background: #034198;
+}
+.CountriesList::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #2c2d2f;
+}
+
+.CountriesList::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.CountriesList::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #034198;
 }

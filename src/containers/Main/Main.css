@@ -1,0 +1,16 @@
+.Main{
+    background: url("./main-background.jpg") 50% 50% no-repeat;
+    background-size: cover;
+}
+.MeWrapper{
+    background: rgba(120, 120, 120, 0.48);
+    min-height: 100px;
+    margin: 150px auto auto;
+    font-size: 40px;
+    padding: 20px 50px;
+    border-radius: 15px;
+    font-family: 'Times', 'sans-serif';
+}
+.Name span, .Job span{
+    color: #022355;
+}
