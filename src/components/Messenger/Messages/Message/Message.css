@@ -6,6 +6,7 @@
 }
 .MessageWrapper{
     border: 2px solid #034198;
+    border-radius: 4px;
     padding: 5px 20px;
     word-wrap: break-word;
     font-size: 14px;
