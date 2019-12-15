@@ -1,53 +1,84 @@
-.Main-header{
-  padding: 0 5px 5px;
-  margin-bottom: 50px;
+.Main{
+  margin: 0 auto ;
+  display: flex;
 }
-.Main-header ul{
-  margin: 0;
-  padding: 0;
-  z-index: 10;
-}
-.Main-header li{
-  display: inline-block;
-  list-style: none;
-  margin: 0 5px 0 5px;
-  padding: 1px;
-}
-.NavLink {
-  border-radius: 5px;
-  text-decoration: none;
-  border: 1px solid #493870;
-  padding: 3px 10px;
-  background: #7056ac;
-  color: #fff;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.BurgerWrapper{
+.Aside{
+  width: 23%;
+  height: 100vh;
+  background: #17181b;
+  z-index: 0;
   position: relative;
 }
-.Burger{
-  position: absolute;
-  top: 30px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  width: 100%;
+.Aside + div{
+  background: #2c2d2f;
+  width: 80%;
 }
-.NavLink + .Burger > li{
-  margin: 3px 0;
-  width: 50%;
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.Burger .NavLink{
+.Main-nav{
+  z-index: 1;
+  position: relative;
+}
+.Main-nav > li{
+  border-bottom: 1px solid #a4a4a4;
+  background: #17181b;
+  text-transform: uppercase;
+  font-family: 'sans-serif' , 'arial';
+}
+.Main-nav > li > .NavLink{
+  padding: 5px 3px 5px 18px;
+  display: inline-block;
+}
+
+.NavLink{
+  color: #a4a4a4;
+  text-decoration: none;
   display: inline-block;
   width: 100%;
-  pointer-events: visible;
-}
-.NavLink.active{
-  background: #493870;
 }
 .NavLink:hover{
-  background: #493870;
+  color: #fff;
+}
+.MyPhoto{
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 10;
+}
+.MyPhoto img{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.MyPhoto p{
+  font-family: 'Times', 'sans-serif';
+  position: absolute;
+  bottom: 0;
+  background: rgba(25, 230, 7, 0.59);
+  width: 100%;
+  margin: 0;
+  padding: 10px 0;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+.BurgerWrapper{
+  position: relative;
+  cursor: pointer;
+}
+.Burger{
+  padding-left: 10px;
+  position: absolute;
+  top: 130%;
+  transition-duration: 1s;
+  z-index: -1;
+}
+.Burger .NavLink{
+  padding: 5px 5px 5px 20px;
+  font-size: 15px;
+  border-bottom: 1px solid #fff;
 }

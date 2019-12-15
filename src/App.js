@@ -6,7 +6,6 @@ import About from "./containers/About/About";
 import CountriesInfo from "./containers/Portfolio/CountriesInfo/CountriesInfo";
 import Messenger from "./containers/Portfolio/Messenger/Messenger";
 import MoviesContainer from "./containers/Portfolio/MoviesContainer/MoviesContainer";
-//todo: can't solve problem with z-index
 class App extends Component{
   state = {
     workFlag: false
@@ -20,35 +19,41 @@ class App extends Component{
     });
   };
   render(){
-    const burgerButton = ['NavLink'];
+    const burgerButton = ['NavLink', 'BurgerButton'];
     if(this.state.workFlag){
       burgerButton.push('active');
     }
     const burgerClass = burgerButton.join(' ');
     return (
         <BrowserRouter>
-          <header className='Main-header'>
-            <ul>
-              <li><NavLink onClick={this.workFlagFalse} className='NavLink' exact to='/'>Main</NavLink></li>
-              <li><NavLink onClick={this.workFlagFalse} className='NavLink' to='/about'>About Me</NavLink></li>
-              <li className='BurgerWrapper'>
-                <span className={burgerClass} onClick={this.workFlagHandler}>Wanna checkout my works?</span>
-                <ul className='Burger' style={{transform: this.state.workFlag ? 'translateY(0)':'translateY(-150%)', transitionDuration: '1s'}}>
-                  <li><NavLink onClick={this.workFlagFalse} className='NavLink' to='/countries-info'>Countries</NavLink></li>
-                  <li><NavLink onClick={this.workFlagFalse} className='NavLink' to='/messenger'>Messenger</NavLink></li>
-                  <li><NavLink onClick={this.workFlagFalse} className='NavLink' to='/watchlist'>Watchlist</NavLink></li>
-                </ul>
-              </li>
-            </ul>
-          </header>
-          <Switch>
-            <Route path='/' exact component={Main}/>
-            <Route path='/about' component={About}/>
-            <Route path='/countries-info' component={CountriesInfo}/>
-            <Route path='/messenger' component={Messenger}/>
-            <Route path='/watchlist' component={MoviesContainer}/>
-            <Route render={() => <h1>Page Not Found</h1>}/>
-          </Switch>
+          <main className='Main'>
+            <aside className='Aside'>
+              <div className='MyPhoto'>
+                <img src={require('./my-photo.jpg')} alt="me"/>
+                <p>Beks Kadyrbekov</p>
+              </div>
+              <ul className='Main-nav'>
+                <li><NavLink onClick={this.workFlagFalse} className='NavLink' exact to='/'>Main</NavLink></li>
+                <li><NavLink onClick={this.workFlagFalse} className='NavLink' to='/about'>About Me</NavLink></li>
+                <li className='BurgerWrapper'>
+                  <span className={burgerClass} onClick={this.workFlagHandler}>Portfolio</span>
+                  <ul className='Burger' style={{transform: this.state.workFlag ? 'translateY(0)' : 'translateY(-150%)'}}>
+                    <li><NavLink onClick={this.workFlagFalse} className='NavLink' to='/countries-info'>Countries</NavLink></li>
+                    <li><NavLink onClick={this.workFlagFalse} className='NavLink' to='/messenger'>Messenger</NavLink></li>
+                    <li><NavLink onClick={this.workFlagFalse} className='NavLink' to='/watchlist'>Watchlist</NavLink></li>
+                  </ul>
+                </li>
+              </ul>
+            </aside>
+            <Switch>
+              <Route path='/' exact component={Main}/>
+              <Route path='/about' component={About}/>
+              <Route path='/countries-info' component={CountriesInfo}/>
+              <Route path='/messenger' component={Messenger}/>
+              <Route path='/watchlist' component={MoviesContainer}/>
+              <Route render={() => <h1>Page Not Found</h1>}/>
+            </Switch>
+          </main>
         </BrowserRouter>
     );
   }

@@ -5,14 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #b4b4b4;
 }
-body > div{
-  max-width: 1200px;
-  padding: 10px 15px;
-  margin: 20px auto 0;
-  overflow: hidden;
-  min-height: 500px;
-}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

@@ -3,9 +3,9 @@ import React, {Fragment} from 'react';
 const About = () => {
     return (
         <Fragment>
-            <main>
+            <div>
                 about me
-            </main>
+            </div>
         </Fragment>
     );
 };
